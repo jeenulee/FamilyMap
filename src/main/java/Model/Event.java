@@ -2,7 +2,7 @@ package Model;
 
 import java.util.Objects;
 
-public class Event {
+public class      Event {
     private String eventID;
     private String associatedUsername;
     private String personID;

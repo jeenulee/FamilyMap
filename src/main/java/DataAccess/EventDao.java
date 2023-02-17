@@ -3,11 +3,12 @@ package DataAccess;
 import Model.Event;
 
 import java.sql.*;
+import java.util.List;
 
 public class EventDao {
     private final Connection conn;
 
-    public EventDAO(Connection conn) {
+    public EventDao(Connection conn) {
         this.conn = conn;
     }
 
@@ -69,4 +70,15 @@ public class EventDao {
             throw new DataAccessException("Error encountered while clearing the event table");
         }
     }
+
+    public List<Event> findForUser(String username){
+        return null;
+    }
+
+    public Event findEventByPerson(String personID) throws DataAccessException{
+
+        return null;
+    }
+
+
 }
