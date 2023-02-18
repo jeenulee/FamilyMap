@@ -6,11 +6,25 @@ import java.sql.*;
 import java.util.List;
 
 public class EventDao {
+    /**
+     * connection variable
+     */
     private final Connection conn;
+
+    /**
+     * establishing a connection
+     * @param conn
+     */
 
     public EventDao(Connection conn) {
         this.conn = conn;
     }
+
+    /**
+     * inserts an event into the database
+     * @param event
+     * @throws DataAccessException if data is not accessible
+     */
 
     public void insert(Event event) throws DataAccessException {
         //We can structure our string to be similar to a sql command, but if we insert question
@@ -38,6 +52,13 @@ public class EventDao {
         }
     }
 
+    /**
+     * finds an event by the eventID
+     * @param eventID
+     * @return the event object
+     * @throws DataAccessException
+     */
+
     public Event find(String eventID) throws DataAccessException {
         Event event;
         ResultSet rs;
@@ -61,6 +82,11 @@ public class EventDao {
 
     }
 
+    /**
+     * clears the database of events
+     * @throws DataAccessException
+     */
+
     public void clear() throws DataAccessException {
         String sql = "DELETE FROM Events";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -71,9 +97,22 @@ public class EventDao {
         }
     }
 
+    /**
+     * finds events according to the username
+     * @param username
+     * @return list of events
+     */
+
     public List<Event> findForUser(String username){
         return null;
     }
+
+    /**
+     * return an event by a specific personID
+     * @param personID
+     * @return
+     * @throws DataAccessException
+     */
 
     public Event findEventByPerson(String personID) throws DataAccessException{
 
