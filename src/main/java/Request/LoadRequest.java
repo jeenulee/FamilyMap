@@ -3,6 +3,11 @@ import Model.Event;
 import Model.User;
 import Model.Person;
 public class LoadRequest {
+    /**
+     * these will take JSON arrays of objects
+     */
+
+
     private User[] users;
     private Person[] persons;
     private Event[] events;

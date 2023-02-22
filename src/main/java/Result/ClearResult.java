@@ -2,6 +2,8 @@ package Result;
 
 public class ClearResult {
 
+
+
     private String message;
     private boolean success;
 

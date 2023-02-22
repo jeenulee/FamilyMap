@@ -2,6 +2,10 @@ package Request;
 
 public class RegisterRequest {
 
+    /**
+     * this will allow a user to register for an account
+     */
+
     private String username;
     private String password;
     private String email;

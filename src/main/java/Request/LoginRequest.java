@@ -3,6 +3,10 @@ package Request;
 
     public class LoginRequest {
 
+        /**
+         * this will be able to request a login for a user
+         */
+
         private String username;
         private String password;
 
