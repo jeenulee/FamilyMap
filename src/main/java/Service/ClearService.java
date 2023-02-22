@@ -5,25 +5,15 @@ public class ClearService {
 private String message;
 private boolean success;
 
-public ClearService(String message, boolean success){
-    this.message = message;
-    this.success = success;
+    /**
+     * this will clear the table of data? not really sure actually
+     * @return
+     */
+
+
+public ClearService clear() {
+    return null;
 }
 
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
 }

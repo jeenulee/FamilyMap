@@ -1,30 +1,15 @@
 package Service;
-
+import Result.FillResult;
 public class FillService {
 
-    private String message;
-    private boolean success;
 
-
-    public FillService(String message, boolean success){
-        this.message = message;
-        this.success = success;
-    }
-
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
+    /**
+     * this will allow us to populate the server database
+     * @param username
+     * @param numGenerations
+     * @return
+     */
+   FillResult fill(String username, int numGenerations){
+       return null;
+   }
 }
