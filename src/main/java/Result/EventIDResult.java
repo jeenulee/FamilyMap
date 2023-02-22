@@ -13,7 +13,19 @@ public class EventIDResult {
     private int year;
     private boolean success;
 
-
+    /**
+     * This is a constructor for the EventID Results
+     * @param associatedUsername
+     * @param eventID
+     * @param personID
+     * @param latitude
+     * @param longitude
+     * @param country
+     * @param city
+     * @param eventType
+     * @param year
+     * @param success
+     */
     public EventIDResult(String associatedUsername, String eventID, String personID, float latitude, float longitude, String country, String city, String eventType, int year, boolean success) {
         this.associatedUsername = associatedUsername;
         this.eventID = eventID;

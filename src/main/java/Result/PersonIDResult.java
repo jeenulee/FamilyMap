@@ -12,6 +12,18 @@ public class PersonIDResult {
     private String spouseID;
     private boolean success;
 
+    /**
+     * This is a constructor for the PersonID results
+     * @param associatedUsername
+     * @param personID
+     * @param firstName
+     * @param lastName
+     * @param gender
+     * @param fatherID
+     * @param motherID
+     * @param spouseID
+     * @param success
+     */
     public PersonIDResult(String associatedUsername, String personID, String firstName, String lastName, String gender, String fatherID, String motherID, String spouseID, boolean success) {
         this.associatedUsername = associatedUsername;
         this.personID = personID;

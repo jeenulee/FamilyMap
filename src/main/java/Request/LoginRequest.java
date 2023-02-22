@@ -10,7 +10,11 @@ package Request;
         private String username;
         private String password;
 
-
+        /**
+         * THis is a constructor for the Login Requests
+         * @param username
+         * @param password
+         */
         public LoginRequest(String username, String password){
             this.username = username;
             this.password = password;

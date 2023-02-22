@@ -5,6 +5,11 @@ public class FillResult {
     private String message;
     private boolean success;
 
+    /**
+     * This is a constructor for the Fill Result class
+     * @param message
+     * @param success
+     */
     public FillResult(String message, boolean success) {
         this.message = message;
         this.success = success;

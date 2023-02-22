@@ -6,7 +6,11 @@ public class PersonResult {
     Person[] person;
     private boolean success;
 
-
+    /**
+     * This is a constructor for the PersonResults
+     * @param person
+     * @param success
+     */
     public PersonResult(Person[] person, boolean success) {
         this.person = person;
         this.success = success;

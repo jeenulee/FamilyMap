@@ -5,6 +5,11 @@ public class LoadResult {
     private String message;
     private boolean success;
 
+    /**
+     * this is a constructor to load the results
+     * @param message
+     * @param success
+     */
     public LoadResult(String message, boolean success) {
         this.message = message;
         this.success = success;

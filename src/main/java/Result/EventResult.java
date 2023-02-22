@@ -6,6 +6,12 @@ public class EventResult {
     Event[] data;
     private boolean success;
 
+
+    /**
+     * This is a constructor for the Event Results
+     * @param data
+     * @param success
+     */
     public EventResult(Event[] data, boolean success) {
         this.data = data;
         this.success = success;

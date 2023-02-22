@@ -7,6 +7,12 @@ public class LoginResult {
     private String personID;
     private boolean success;
 
+    /**
+     * this is a constructor for the Login Results
+     * @param username
+     * @param personID
+     * @param success
+     */
     public LoginResult(String username, String personID, boolean success) {
         this.username = username;
         this.personID = personID;

@@ -5,6 +5,11 @@ public class AuthToken {
     private String authtoken;
     private String username;
 
+    /**
+     * This is a constructor for the AuthToken Model class
+     * @param authtoken
+     * @param username
+     */
 
     public AuthToken(String authtoken, String username){
 

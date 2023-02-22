@@ -6,6 +6,12 @@ public class RegisterResult {
     private String personID;
     private boolean success;
 
+    /**
+     * This is a constructor for the Register Result class
+     * @param username
+     * @param personID
+     * @param success
+     */
     public RegisterResult(String username, String personID, boolean success) {
         this.username = username;
         this.personID = personID;

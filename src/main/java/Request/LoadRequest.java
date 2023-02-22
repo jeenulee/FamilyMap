@@ -12,6 +12,12 @@ public class LoadRequest {
     private Person[] persons;
     private Event[] events;
 
+    /**
+     * This is a constructor for the Load Requests
+     * @param users
+     * @param persons
+     * @param events
+     */
     public LoadRequest(User[] users, Person[] persons, Event[] events) {
         this.users = users;
         this.persons = persons;

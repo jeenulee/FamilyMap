@@ -12,6 +12,17 @@ public class Person {
     private String motherID;
     private String spouseID;
 
+    /**
+     * This is a constructor for the Person Model class
+     * @param personID
+     * @param associatedUsername
+     * @param firstName
+     * @param lastName
+     * @param gender
+     * @param fatherID
+     * @param motherID
+     * @param spouseID
+     */
     public Person(String personID, String associatedUsername, String firstName, String lastName, String gender, String fatherID, String motherID, String spouseID){
 
         this.personID = personID;
