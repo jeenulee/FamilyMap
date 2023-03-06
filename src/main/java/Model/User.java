@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Objects;
+
 public class User {
 
     private String username;
@@ -50,7 +52,12 @@ public class User {
     public String getPersonID(){return personID;}
     public void setPersonID(String personID){this.personID = personID;}
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(email, user.email) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(gender, user.gender)  && Objects.equals(personID, user.personID);
 
-
-
+    }
 }
