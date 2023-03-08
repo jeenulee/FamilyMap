@@ -62,15 +62,12 @@ public class UserDao {
      * @throws DataAccessException
      */
     public void insert(User user) throws DataAccessException {
-        //We can structure our string to be similar to a sql command, but if we insert question
-        //marks we can change them later with help from the statement
+
         String sql = "INSERT INTO User (username, password, email, firstName, lastName, gender, personID ) VALUES(?,?,?,?,?,?,?)";
 
         try (
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
-            //Using the statements built-in set(type) functions we can pick the question mark we want
-            //to fill in and give it a proper value. The first argument corresponds to the first
-            //question mark found in our sql String
+
             stmt.setString(1, user.getUserName());
             stmt.setString(2, user.getPassword());
             stmt.setString(3, user.getEmail());

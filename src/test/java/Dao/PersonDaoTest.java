@@ -35,19 +35,7 @@ public class PersonDaoTest {
         db.closeConnection(false);
     }
 
-    @Test
-    public void insertPass() throws DataAccessException {
-        personDao.insert(person);
-        Person compareTest = personDao.findPerson(person.getPersonID());
-        assertNotNull(compareTest);
-        assertEquals(person, compareTest);
-    }
 
-    @Test
-    public void insertFail() throws DataAccessException {
-        personDao.insert(person);
-        assertThrows(DataAccessException.class, () -> personDao.insert(person));
-    }
 
     @Test
     public void findPass() throws DataAccessException {
@@ -64,13 +52,27 @@ public class PersonDaoTest {
     }
 
     @Test
+    public void insertPass() throws DataAccessException {
+        personDao.insert(person);
+        Person compareTest = personDao.findPerson(person.getPersonID());
+        assertNotNull(compareTest);
+        assertEquals(person, compareTest);
+    }
+
+    @Test
+    public void insertFail() throws DataAccessException {
+        personDao.insert(person);
+        assertThrows(DataAccessException.class, () -> personDao.insert(person));
+    }
+
+    @Test
     public void clearPass() throws DataAccessException {
         personDao.insert(person);
-        Person tempPerson = personDao.findPerson(person.getPersonID());
+        Person temp = personDao.findPerson(person.getPersonID());
         personDao.clear();
         Person fakePerson = personDao.findPerson(person.getPersonID());
 
-        assertNotNull(tempPerson);
+        assertNotNull(temp);
         assertNull(fakePerson);
     }
 }
